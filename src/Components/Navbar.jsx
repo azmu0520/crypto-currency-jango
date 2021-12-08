@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Menu, Typography, Avatar } from 'antd';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   HomeOutlined,
   MoneyCollectOutlined,
@@ -12,8 +12,6 @@ import {
 import icon from '../images/logo2.png';
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
   return (
     <div className='nav-container'>
       <div className='logo-container'>
@@ -23,19 +21,19 @@ const Navbar = () => {
         </Typography.Title>
       </div>
       <Menu theme='dark'>
-        <Menu.Item icon={<HomeOutlined />}>
+        <Menu.Item key='1' icon={<HomeOutlined />}>
           <Link to='/'>Home</Link>
         </Menu.Item>
-        <Menu.Item icon={<FundOutlined />}>
+        <Menu.Item key='2' icon={<FundOutlined />}>
           <Link to='/cryptocerrencies'>Cryptocerrencies </Link>
         </Menu.Item>
-        <Menu.Item icon={<MenuOutlined />}>
+        <Menu.Item key='3' icon={<MenuOutlined />}>
           <Link to='/cryptoDetails'>CryptoDetails </Link>
         </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined />}>
+        <Menu.Item key='4' icon={<MoneyCollectOutlined />}>
           <Link to='/exchanges'>Exchanges</Link>
         </Menu.Item>
-        <Menu.Item icon={<BulbOutlined />}>
+        <Menu.Item key='5' icon={<BulbOutlined />}>
           <Link to='/news'>News</Link>
         </Menu.Item>
       </Menu>
